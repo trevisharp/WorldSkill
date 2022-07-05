@@ -58,6 +58,8 @@ namespace curitibatemaimagem
 
         private void pb_MouseMove(object sender, MouseEventArgs e)
         {
+            Cursor = Cursors.Arrow;
+
             if (contains(rec.X + rec.Width, rec.Y + rec.Height))
             {
                 Cursor = Cursors.SizeNWSE;
@@ -74,9 +76,10 @@ namespace curitibatemaimagem
             {
                 Cursor = Cursors.SizeNWSE;
             }
-            else
+            else if (new Rectangle(rec.X, rec.Y, rec.Width, rec.Height)
+                    .Contains(e.Location))
             {
-                Cursor = Cursors.Arrow;
+                Cursor = Cursors.SizeAll;
             }
 
             if (p == null)
@@ -100,18 +103,30 @@ namespace curitibatemaimagem
             int dx = q.X - p.X,
                 dy = q.Y - p.Y;
 
+            //Inferior Direita
             if (contains(rec.X + rec.Width, rec.Y + rec.Height))
             {
-                rec = new Rectangle(rec.X, rec.Y, rec.Width + dx, rec.Height + dy);
+                if(rec.X + rec.Width <= rec.X + 5) // Espelhar a imagem
+                {
+                    rec = new Rectangle(rec.X, rec.Y, -rec.Width - dx, rec.Height + dy);
+                }
+                else
+                {
+                    rec = new Rectangle(rec.X, rec.Y, rec.Width + dx, rec.Height + dy);
+                }
             }
+            //Superior Direita
             else if(contains(rec.X + rec.Width, rec.Y))
             {
+                
                 rec = new Rectangle(rec.X, rec.Y + dy, rec.Width + dx, rec.Height - dy);
             }
+            //Superior Esquerda
             else if (contains(rec.X, rec.Y + rec.Height))
             {
                 rec = new Rectangle(rec.X + dx, rec.Y, rec.Width - dx, rec.Height + dy);
             }
+            //Inferior Esquerda
             else if (contains(rec.X, rec.Y))
             {
                 rec = new Rectangle(rec.X + dx, rec.Y + dy, rec.Width - dx, rec.Height - dy);
