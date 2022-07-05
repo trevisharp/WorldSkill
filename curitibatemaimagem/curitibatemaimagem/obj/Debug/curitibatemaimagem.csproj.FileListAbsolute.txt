@@ -1,0 +1,11 @@
+C:\Users\Aluno\Desktop\repositrio\WorldSkill\curitibatemaimagem\curitibatemaimagem\obj\Debug\curitibatemaimagem.csproj.AssemblyReference.cache
+C:\Users\Aluno\Desktop\repositrio\WorldSkill\curitibatemaimagem\curitibatemaimagem\obj\Debug\curitibatemaimagem.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aluno\Desktop\repositrio\WorldSkill\curitibatemaimagem\curitibatemaimagem\obj\Debug\curitibatemaimagem.Properties.Resources.resources
+C:\Users\Aluno\Desktop\repositrio\WorldSkill\curitibatemaimagem\curitibatemaimagem\obj\Debug\curitibatemaimagem.csproj.GenerateResource.cache
+C:\Users\Aluno\Desktop\repositrio\WorldSkill\curitibatemaimagem\curitibatemaimagem\obj\Debug\curitibatemaimagem.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\repositrio\WorldSkill\curitibatemaimagem\curitibatemaimagem\bin\Debug\curitibatemaimagem.exe.config
+C:\Users\Aluno\Desktop\repositrio\WorldSkill\curitibatemaimagem\curitibatemaimagem\bin\Debug\curitibatemaimagem.exe
+C:\Users\Aluno\Desktop\repositrio\WorldSkill\curitibatemaimagem\curitibatemaimagem\bin\Debug\curitibatemaimagem.pdb
+C:\Users\Aluno\Desktop\repositrio\WorldSkill\curitibatemaimagem\curitibatemaimagem\obj\Debug\curitibatemaimagem.Form1.resources
+C:\Users\Aluno\Desktop\repositrio\WorldSkill\curitibatemaimagem\curitibatemaimagem\obj\Debug\curitibatemaimagem.exe
+C:\Users\Aluno\Desktop\repositrio\WorldSkill\curitibatemaimagem\curitibatemaimagem\obj\Debug\curitibatemaimagem.pdb
