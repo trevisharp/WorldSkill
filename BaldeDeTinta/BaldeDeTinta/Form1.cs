@@ -136,6 +136,11 @@ namespace BaldeDeTinta
                 pb.Refresh();
             };
 
+            btnSalvar.Click += delegate
+            {
+                bmp.Save("aaaaa.png");
+            };
+
             Teste teste = new Teste();
             teste.Valor = 65 + 256 * 66 + 256 * 256 * 67 + 256 * 256 * 256 * 68;
             teste.OtoValor = "oto valo";
@@ -159,7 +164,7 @@ namespace BaldeDeTinta
             stream.Close();
 
             MessageBox.Show($"{obj.Valor} {obj.OtoValor} {obj.bmp}");
-            bmp.Save("aaaaa.png");
+            
         }
     }
 }
