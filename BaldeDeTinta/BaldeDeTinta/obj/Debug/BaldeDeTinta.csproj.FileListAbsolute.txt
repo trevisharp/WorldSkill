@@ -1,0 +1,11 @@
+C:\Users\Aluno\Desktop\repos\WorldSkill\BaldeDeTinta\BaldeDeTinta\bin\Debug\BaldeDeTinta.exe.config
+C:\Users\Aluno\Desktop\repos\WorldSkill\BaldeDeTinta\BaldeDeTinta\bin\Debug\BaldeDeTinta.exe
+C:\Users\Aluno\Desktop\repos\WorldSkill\BaldeDeTinta\BaldeDeTinta\bin\Debug\BaldeDeTinta.pdb
+C:\Users\Aluno\Desktop\repos\WorldSkill\BaldeDeTinta\BaldeDeTinta\obj\Debug\BaldeDeTinta.csproj.AssemblyReference.cache
+C:\Users\Aluno\Desktop\repos\WorldSkill\BaldeDeTinta\BaldeDeTinta\obj\Debug\BaldeDeTinta.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aluno\Desktop\repos\WorldSkill\BaldeDeTinta\BaldeDeTinta\obj\Debug\BaldeDeTinta.Form1.resources
+C:\Users\Aluno\Desktop\repos\WorldSkill\BaldeDeTinta\BaldeDeTinta\obj\Debug\BaldeDeTinta.Properties.Resources.resources
+C:\Users\Aluno\Desktop\repos\WorldSkill\BaldeDeTinta\BaldeDeTinta\obj\Debug\BaldeDeTinta.csproj.GenerateResource.cache
+C:\Users\Aluno\Desktop\repos\WorldSkill\BaldeDeTinta\BaldeDeTinta\obj\Debug\BaldeDeTinta.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\repos\WorldSkill\BaldeDeTinta\BaldeDeTinta\obj\Debug\BaldeDeTinta.exe
+C:\Users\Aluno\Desktop\repos\WorldSkill\BaldeDeTinta\BaldeDeTinta\obj\Debug\BaldeDeTinta.pdb
