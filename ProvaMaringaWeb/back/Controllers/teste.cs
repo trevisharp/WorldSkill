@@ -14,4 +14,12 @@ public class testeController : ControllerBase
             "teste3"
         };
     }
+
+    [HttpGet ("cep")]
+    public async IActionResult getcep(string cep){
+        var client = new HttpClient();
+        var response = await client.GetAsync($"http://ws.apicep.com/cep/{cep}.json");
+
+        return Ok(response.Content.ReadAsStringAsync());
+    }
 }
