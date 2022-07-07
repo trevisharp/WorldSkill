@@ -16,10 +16,10 @@ public class testeController : ControllerBase
     }
 
     [HttpGet ("cep")]
-    public async IActionResult getcep(string cep){
+    public async void getcep(string cep){
         var client = new HttpClient();
         var response = await client.GetAsync($"http://ws.apicep.com/cep/{cep}.json");
 
-        return Ok(response.Content.ReadAsStringAsync());
+        // return Ok(response.Content.ReadAsStringAsync());
     }
 }
