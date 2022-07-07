@@ -160,7 +160,6 @@ namespace BaldeDeTinta
 
             stream = new FileStream(@"C:\Users\Aluno\Desktop\repos\WorldSkill\prj.bin", FileMode.Open, FileAccess.Read, FileShare.None);
             Teste obj = (Teste)formatter.Deserialize(stream);
-
             stream.Close();
 
             MessageBox.Show($"{obj.Valor} {obj.OtoValor} {obj.bmp}");
