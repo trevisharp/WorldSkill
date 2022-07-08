@@ -1,10 +1,10 @@
 @page "/teste"
-@inject IJSRuntime JSRuntime
+@* @inject IJSRuntime JSRuntime *@
 
 
 <PageTitle>teste</PageTitle>
 
-<div>
+@* <div>
     <div>
         <p>Current DateTime:<b> @CurrentDate</b></p>
         <br />
@@ -22,6 +22,6 @@
 
     private async void GetCurrentDateTime()
     {
-        await JSRuntime.InvokeAsync<object>("getDateTime");
+        await JSRuntime.InvokeAsync<object>("getDateTime", new object[] { "<b>OI</b>" });
     }
-}
+} *@

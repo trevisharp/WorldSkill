@@ -1,4 +1,5 @@
-function getDateTime(){
+function getDateTime(x){
+    console.log(x)
     let comp = document.getElementsByClassName("pepsijalma")[0]
-    comp.innerHTML = "<marquee>CHEGUEI PORA</marquee>"
+    comp.innerHTML = x
 }

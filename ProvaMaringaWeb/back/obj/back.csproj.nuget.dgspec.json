@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno\\Desktop\\repositorio\\WorldSkill\\ProvaMaringaWeb\\back\\back.csproj": {}
+    "C:\\Users\\Aluno\\Desktop\\Repos\\WorldSkill\\ProvaMaringaWeb\\back\\back.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno\\Desktop\\repositorio\\WorldSkill\\ProvaMaringaWeb\\back\\back.csproj": {
+    "C:\\Users\\Aluno\\Desktop\\Repos\\WorldSkill\\ProvaMaringaWeb\\back\\back.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\repositorio\\WorldSkill\\ProvaMaringaWeb\\back\\back.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\Repos\\WorldSkill\\ProvaMaringaWeb\\back\\back.csproj",
         "projectName": "back",
-        "projectPath": "C:\\Users\\Aluno\\Desktop\\repositorio\\WorldSkill\\ProvaMaringaWeb\\back\\back.csproj",
+        "projectPath": "C:\\Users\\Aluno\\Desktop\\Repos\\WorldSkill\\ProvaMaringaWeb\\back\\back.csproj",
         "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aluno\\Desktop\\repositorio\\WorldSkill\\ProvaMaringaWeb\\back\\obj\\",
+        "outputPath": "C:\\Users\\Aluno\\Desktop\\Repos\\WorldSkill\\ProvaMaringaWeb\\back\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
