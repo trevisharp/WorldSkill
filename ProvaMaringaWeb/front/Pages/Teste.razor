@@ -1,0 +1,27 @@
+@page "/teste"
+@inject IJSRuntime JSRuntime
+
+
+<PageTitle>teste</PageTitle>
+
+<div>
+    <div>
+        <p>Current DateTime:<b> @CurrentDate</b></p>
+        <br />
+        <input type="button" @onclick="@GetCurrentDateTime" value="Get Current DateTime" />
+    </div>
+</div>
+
+<div class="pepsijalma">
+    
+</div>
+
+@code {
+    [Parameter]
+    public string CurrentDate { get; set; }
+
+    private async void GetCurrentDateTime()
+    {
+        await JSRuntime.InvokeAsync<object>("getDateTime");
+    }
+}

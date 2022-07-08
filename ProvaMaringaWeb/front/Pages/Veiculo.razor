@@ -15,7 +15,7 @@
 </label>
 
 <label>
-    
+    <a href="/js">clica aqui vamo ve se funciona sa bosta</a>
 </label>
 
 
@@ -28,9 +28,9 @@
     List<string> modelos = new List<string>();
 
     protected override async void OnInitialized(){
-        HttpClient client = new HttpClient();
+        @* HttpClient client = new HttpClient();
         var r = await client.GetAsync("http://localhost:5166/teste/getTeste");
         modelos = await r.Content.ReadFromJsonAsync<List<string>>() ?? new List<string>();
-        StateHasChanged();
+        StateHasChanged(); *@
     }
 }

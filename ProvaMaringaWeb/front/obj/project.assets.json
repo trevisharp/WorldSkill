@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\repositorio\\WorldSkill\\ProvaMaringaWeb\\front\\front.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\Repos\\WorldSkill\\ProvaMaringaWeb\\front\\front.csproj",
       "projectName": "front",
-      "projectPath": "C:\\Users\\Aluno\\Desktop\\repositorio\\WorldSkill\\ProvaMaringaWeb\\front\\front.csproj",
+      "projectPath": "C:\\Users\\Aluno\\Desktop\\Repos\\WorldSkill\\ProvaMaringaWeb\\front\\front.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Desktop\\repositorio\\WorldSkill\\ProvaMaringaWeb\\front\\obj\\",
+      "outputPath": "C:\\Users\\Aluno\\Desktop\\Repos\\WorldSkill\\ProvaMaringaWeb\\front\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
