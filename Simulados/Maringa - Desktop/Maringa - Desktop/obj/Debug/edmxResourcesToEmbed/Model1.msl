@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="provaMModelStoreContainer" CdmEntityContainer="provaMEntities">
+    <EntitySetMapping Name="tbCEP">
+      <EntityTypeMapping TypeName="provaMModel.tbCEP">
+        <MappingFragment StoreEntitySet="tbCEP">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="cep" ColumnName="cep" />
+          <ScalarProperty Name="endereco" ColumnName="endereco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbConsumo">
+      <EntityTypeMapping TypeName="provaMModel.tbConsumo">
+        <MappingFragment StoreEntitySet="tbConsumo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="combustivel" ColumnName="combustivel" />
+          <ScalarProperty Name="distancia" ColumnName="distancia" />
+          <ScalarProperty Name="media" ColumnName="media" />
+          <ScalarProperty Name="preco" ColumnName="preco" />
+          <ScalarProperty Name="media_litro_gasto" ColumnName="media_litro_gasto" />
+          <ScalarProperty Name="preco_para_percorrer" ColumnName="preco_para_percorrer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbIMC">
+      <EntityTypeMapping TypeName="provaMModel.tbIMC">
+        <MappingFragment StoreEntitySet="tbIMC">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="peso" ColumnName="peso" />
+          <ScalarProperty Name="altura" ColumnName="altura" />
+          <ScalarProperty Name="imc" ColumnName="imc" />
+          <ScalarProperty Name="classificacao" ColumnName="classificacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTempetura">
+      <EntityTypeMapping TypeName="provaMModel.tbTempetura">
+        <MappingFragment StoreEntitySet="tbTempetura">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="temperatura" ColumnName="temperatura" />
+          <ScalarProperty Name="temperatura_convertida" ColumnName="temperatura_convertida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,17 @@
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\bin\Debug\Maringa - Desktop.exe.config
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\bin\Debug\Maringa - Desktop.exe
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\bin\Debug\Maringa - Desktop.pdb
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\bin\Debug\EntityFramework.dll
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\bin\Debug\EntityFramework.xml
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa - Desktop.csproj.AssemblyReference.cache
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa - Desktop.csproj.SuggestedBindingRedirects.cache
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa___Desktop.Form1.resources
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa___Desktop.Properties.Resources.resources
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa - Desktop.csproj.GenerateResource.cache
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa - Desktop.csproj.CoreCompileInputs.cache
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa - Desktop.csproj.CopyComplete
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa - Desktop.exe
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa - Desktop.pdb
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa___Desktop.IMC.resources
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa___Desktop.COMBUSTIVEL.resources
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa___Desktop.TEMPERATURA.resources

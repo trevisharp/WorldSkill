@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="provaMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbCEP">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="100" />
+    <Property Name="cep" Type="varchar" MaxLength="11" />
+    <Property Name="endereco" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbConsumo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="100" />
+    <Property Name="combustivel" Type="varchar" MaxLength="20" />
+    <Property Name="distancia" Type="float" />
+    <Property Name="media" Type="float" />
+    <Property Name="preco" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="media_litro_gasto" Type="float" />
+    <Property Name="preco_para_percorrer" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="tbIMC">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="100" />
+    <Property Name="peso" Type="float" />
+    <Property Name="altura" Type="float" />
+    <Property Name="imc" Type="float" />
+    <Property Name="classificacao" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbTempetura">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="100" />
+    <Property Name="temperatura" Type="float" />
+    <Property Name="temperatura_convertida" Type="float" />
+  </EntityType>
+  <EntityContainer Name="provaMModelStoreContainer">
+    <EntitySet Name="tbCEP" EntityType="Self.tbCEP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbConsumo" EntityType="Self.tbConsumo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbIMC" EntityType="Self.tbIMC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbTempetura" EntityType="Self.tbTempetura" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="provaMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbCEP">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cep" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="endereco" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbConsumo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="combustivel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="distancia" Type="Double" />
+    <Property Name="media" Type="Double" />
+    <Property Name="preco" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="media_litro_gasto" Type="Double" />
+    <Property Name="preco_para_percorrer" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="tbIMC">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="peso" Type="Double" />
+    <Property Name="altura" Type="Double" />
+    <Property Name="imc" Type="Double" />
+    <Property Name="classificacao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbTempetura">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="temperatura" Type="Double" />
+    <Property Name="temperatura_convertida" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="provaMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbCEP" EntityType="Self.tbCEP" />
+    <EntitySet Name="tbConsumo" EntityType="Self.tbConsumo" />
+    <EntitySet Name="tbIMC" EntityType="Self.tbIMC" />
+    <EntitySet Name="tbTempetura" EntityType="Self.tbTempetura" />
+  </EntityContainer>
+</Schema>
