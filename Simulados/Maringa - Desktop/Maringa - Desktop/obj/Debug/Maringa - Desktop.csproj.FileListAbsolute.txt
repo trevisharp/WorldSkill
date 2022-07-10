@@ -15,3 +15,4 @@ C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\
 C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa___Desktop.IMC.resources
 C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa___Desktop.COMBUSTIVEL.resources
 C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa___Desktop.TEMPERATURA.resources
+C:\Users\melis\Desktop\WorldSkill\Simulados\Maringa - Desktop\Maringa - Desktop\obj\Debug\Maringa___Desktop.CEP.resources

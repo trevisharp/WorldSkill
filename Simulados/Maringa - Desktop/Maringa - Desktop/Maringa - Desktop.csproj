@@ -112,6 +112,9 @@
     <Compile Include="TEMPERATURA.Designer.cs">
       <DependentUpon>TEMPERATURA.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CEP.resx">
+      <DependentUpon>CEP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="COMBUSTIVEL.resx">
       <DependentUpon>COMBUSTIVEL.cs</DependentUpon>
     </EmbeddedResource>

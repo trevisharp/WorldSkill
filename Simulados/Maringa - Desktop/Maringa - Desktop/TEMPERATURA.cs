@@ -20,63 +20,56 @@ namespace Maringa___Desktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (float.TryParse(txbTemp.Text, out float n))
+            if(double.TryParse(txbTemp.Text, out double temp) || !string.IsNullOrWhiteSpace(txbNome.Text))
             {
+                temp = Math.Round(temp, 2);
+                double tempNova = 0;
+
                 if (radioButton3.Checked)
                 {
-                    double temp = Math.Round(double.Parse(txbTemp.Text), 2);
-                    double tempNova = temp * 1.8 + 32;
-
-                    provaMEntities context = new provaMEntities();
-
-                    context.tbTempetura.Add(new tbTempetura
-                    {
-                        nome = txbNome.Text,
-                        temperatura = temp,
-                        temperatura_convertida = tempNova
-                    });
-
-                    context.SaveChanges();
-                    context.Dispose();
+                    tempNova = Math.Round(temp * 1.8 + 32, 2);
+                    insere(temp, tempNova);
                 }
                 else if (radioButton4.Checked)
                 {
-                    double temp = Math.Round(double.Parse(txbTemp.Text), 2);
-                    double tempNova = temp + 273;
-
-                    provaMEntities context = new provaMEntities();
-
-                    context.tbTempetura.Add(new tbTempetura
-                    {
-                        nome = txbNome.Text,
-                        temperatura = temp,
-                        temperatura_convertida = tempNova
-                    });
-
-                    context.SaveChanges();
-                    context.Dispose();
+                    tempNova = Math.Round(temp + 273, 2);
+                    insere(temp, tempNova);
                 }
                 else
                 {
-                    MessageBox.Show("Selecione uma opcao!");
+                    MessageBox.Show("Por favor, selecione uma opcao");
                 }
             }
             else
             {
-                MessageBox.Show("Digite um valor valido!");
+                MessageBox.Show("Por favor insira um valor valido");
+            }
+
+            void insere(double t, double tn){
+                provaMEntities context = new provaMEntities();
+                context.tbTempetura.Add(new tbTempetura
+                {
+                    nome = txbNome.Text,
+                    temperatura = t,
+                    temperatura_convertida = tn
+                }) ;
+
+                context.SaveChanges();
+                context.Dispose();
             }
             render();
-            
         }
 
         public void render()
         {
-            provaMEntities context = new provaMEntities();
             dataGridView1.Rows.Clear();
+            provaMEntities context = new provaMEntities();
+
             foreach(var item in context.tbTempetura)
             {
                 dataGridView1.Rows.Add(item.nome, item.temperatura, item.temperatura_convertida);
             }
+
             context.Dispose();
         }
     }
