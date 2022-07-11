@@ -25,27 +25,40 @@ namespace Curitiba___Desktop
             bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             g = Graphics.FromImage(bmp);
 
+
+            Load += delegate
+            {
+                g.DrawLine(Pens.Black, new Point(100, 100), new Point(120, 100));
+                this.Refresh();
+
+                //NEM ASSIM FUNCIONA O QUE EU TO FAZENDO DE ERRADO MEU DEUS
+            };
+
+
             btnPoligono.Click += delegate
             {
                 points = new List<Point>();
                 IsPolygon = true;
                 Cursor = Cursors.Cross;
 
-                //if(colorDialog1.ShowDialog() == DialogResult.OK){
-                //    color = colorDialog1.Color;
-                //}
+                if (colorDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    color = colorDialog1.Color;
+                }
             };
 
-            Load += delegate
-            {
-                tm.Start();
-            };
+            //Load += delegate
+            //{
+            //    tm.Start();
+            //};
 
-            tm.Interval = 25;
-            tm.Tick += delegate
-            {
-                pictureBox1.Refresh();
-            };
+            //tm.Interval = 25;
+            //tm.Tick += delegate
+            //{
+            //    pictureBox1.Refresh();
+            //};
+
+            
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -60,12 +73,15 @@ namespace Curitiba___Desktop
             {
                 Pen caneta = new Pen(color, 5);
                 points.Add(new Point(e.X, e.Y));
+                label2.Text = color.ToString();
 
                 if(points.Count() > 1)
                 {
                     label1.Text = $"{points[points.Count() - 1]} {points.Last()}";
-                    g.DrawLine(caneta, points[points.Count() - 1], points.Last());
+                    g.DrawLine(caneta, points.Last(), points[points.Count() - 1]);
                 }
+
+                caneta.Dispose();
             }
         }
     }
