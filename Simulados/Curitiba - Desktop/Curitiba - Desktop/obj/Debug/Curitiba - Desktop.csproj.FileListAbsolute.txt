@@ -1,0 +1,11 @@
+C:\Users\melis\Desktop\WorldSkill\Simulados\Curitiba - Desktop\Curitiba - Desktop\bin\Debug\Curitiba - Desktop.exe.config
+C:\Users\melis\Desktop\WorldSkill\Simulados\Curitiba - Desktop\Curitiba - Desktop\bin\Debug\Curitiba - Desktop.exe
+C:\Users\melis\Desktop\WorldSkill\Simulados\Curitiba - Desktop\Curitiba - Desktop\bin\Debug\Curitiba - Desktop.pdb
+C:\Users\melis\Desktop\WorldSkill\Simulados\Curitiba - Desktop\Curitiba - Desktop\obj\Debug\Curitiba - Desktop.csproj.AssemblyReference.cache
+C:\Users\melis\Desktop\WorldSkill\Simulados\Curitiba - Desktop\Curitiba - Desktop\obj\Debug\Curitiba - Desktop.csproj.SuggestedBindingRedirects.cache
+C:\Users\melis\Desktop\WorldSkill\Simulados\Curitiba - Desktop\Curitiba - Desktop\obj\Debug\Curitiba___Desktop.Form1.resources
+C:\Users\melis\Desktop\WorldSkill\Simulados\Curitiba - Desktop\Curitiba - Desktop\obj\Debug\Curitiba___Desktop.Properties.Resources.resources
+C:\Users\melis\Desktop\WorldSkill\Simulados\Curitiba - Desktop\Curitiba - Desktop\obj\Debug\Curitiba - Desktop.csproj.GenerateResource.cache
+C:\Users\melis\Desktop\WorldSkill\Simulados\Curitiba - Desktop\Curitiba - Desktop\obj\Debug\Curitiba - Desktop.csproj.CoreCompileInputs.cache
+C:\Users\melis\Desktop\WorldSkill\Simulados\Curitiba - Desktop\Curitiba - Desktop\obj\Debug\Curitiba - Desktop.exe
+C:\Users\melis\Desktop\WorldSkill\Simulados\Curitiba - Desktop\Curitiba - Desktop\obj\Debug\Curitiba - Desktop.pdb
