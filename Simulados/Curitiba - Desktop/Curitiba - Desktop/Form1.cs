@@ -23,17 +23,8 @@ namespace Curitiba___Desktop
         {
             InitializeComponent();
             bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            pictureBox1.Image = bmp;
             g = Graphics.FromImage(bmp);
-
-
-            Load += delegate
-            {
-                g.DrawLine(Pens.Black, new Point(100, 100), new Point(120, 100));
-                this.Refresh();
-
-                //NEM ASSIM FUNCIONA O QUE EU TO FAZENDO DE ERRADO MEU DEUS
-            };
-
 
             btnPoligono.Click += delegate
             {
@@ -73,15 +64,16 @@ namespace Curitiba___Desktop
             {
                 Pen caneta = new Pen(color, 5);
                 points.Add(new Point(e.X, e.Y));
-                label2.Text = color.ToString();
+                label2.Text = points.Count.ToString();
 
                 if(points.Count() > 1)
                 {
                     label1.Text = $"{points[points.Count() - 1]} {points.Last()}";
-                    g.DrawLine(caneta, points.Last(), points[points.Count() - 1]);
+                    g.DrawLine(caneta, points.Last(), points[points.Count() - 2]);
                 }
 
                 caneta.Dispose();
+                pictureBox1.Refresh();
             }
         }
     }

@@ -1,0 +1,27 @@
+@page "/teste"
+
+<PageTitle>teste???</PageTitle>
+
+<div>
+    <p>LOGIN</p>
+    <input />
+
+    <p>password</p>
+    <input />
+</div>
+
+
+<button>clique imediatamente</button>
+
+
+@code{
+    public string cpf { get; set; } = "";
+    public string senha {get; set; } = "";
+    private async void login()
+    {
+        var client = new HttpClient();
+        var r = await client.GetAsync($"https://localhost:44355/teste/getTeste?c={cpf}&s={senha}");
+
+        StateHasChanged();
+    }
+}

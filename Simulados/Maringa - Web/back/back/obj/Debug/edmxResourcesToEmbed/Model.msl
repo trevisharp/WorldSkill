@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BancoMaringaModelStoreContainer" CdmEntityContainer="BancoEntities">
+    <EntitySetMapping Name="tbDepartamento">
+      <EntityTypeMapping TypeName="BancoMaringaModel.tbDepartamento">
+        <MappingFragment StoreEntitySet="tbDepartamento">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbReservas">
+      <EntityTypeMapping TypeName="BancoMaringaModel.tbReservas">
+        <MappingFragment StoreEntitySet="tbReservas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_veiculo" ColumnName="id_veiculo" />
+          <ScalarProperty Name="data_saida" ColumnName="data_saida" />
+          <ScalarProperty Name="data_retorno" ColumnName="data_retorno" />
+          <ScalarProperty Name="destino" ColumnName="destino" />
+          <ScalarProperty Name="condutor" ColumnName="condutor" />
+          <ScalarProperty Name="id_departamento" ColumnName="id_departamento" />
+          <ScalarProperty Name="motivo" ColumnName="motivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarios">
+      <EntityTypeMapping TypeName="BancoMaringaModel.tbUsuarios">
+        <MappingFragment StoreEntitySet="tbUsuarios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="id_departamento" ColumnName="id_departamento" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="CNH" ColumnName="CNH" />
+          <ScalarProperty Name="val_CNH" ColumnName="val_CNH" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbVeiculos">
+      <EntityTypeMapping TypeName="BancoMaringaModel.tbVeiculos">
+        <MappingFragment StoreEntitySet="tbVeiculos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

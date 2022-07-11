@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BancoMaringaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbDepartamento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tbReservas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_veiculo" Type="int" />
+          <Property Name="data_saida" Type="datetime" />
+          <Property Name="data_retorno" Type="datetime" />
+          <Property Name="destino" Type="varchar(max)" />
+          <Property Name="condutor" Type="varchar(max)" />
+          <Property Name="id_departamento" Type="int" />
+          <Property Name="motivo" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="tbUsuarios">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar(max)" />
+          <Property Name="id_departamento" Type="int" />
+          <Property Name="cpf" Type="varchar(max)" />
+          <Property Name="tipo" Type="int" />
+          <Property Name="CNH" Type="varchar(max)" />
+          <Property Name="val_CNH" Type="datetime" />
+          <Property Name="telefone" Type="varchar(max)" />
+          <Property Name="senha" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="tbVeiculos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="modelo" Type="varchar(max)" />
+          <Property Name="placa" Type="varchar(max)" />
+          <Property Name="id_usuario" Type="int" />
+        </EntityType>
+        <Association Name="FK__tbReserva__id_de__1920BF5C">
+          <End Role="tbDepartamento" Type="Self.tbDepartamento" Multiplicity="0..1" />
+          <End Role="tbReservas" Type="Self.tbReservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbDepartamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReservas">
+              <PropertyRef Name="id_departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbReserva__id_ve__182C9B23">
+          <End Role="tbVeiculos" Type="Self.tbVeiculos" Multiplicity="0..1" />
+          <End Role="tbReservas" Type="Self.tbReservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbVeiculos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReservas">
+              <PropertyRef Name="id_veiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbUsuario__id_de__1273C1CD">
+          <End Role="tbDepartamento" Type="Self.tbDepartamento" Multiplicity="0..1" />
+          <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbDepartamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarios">
+              <PropertyRef Name="id_departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbVeiculo__id_us__15502E78">
+          <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="0..1" />
+          <End Role="tbVeiculos" Type="Self.tbVeiculos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarios">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbVeiculos">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BancoMaringaModelStoreContainer">
+          <EntitySet Name="tbDepartamento" EntityType="Self.tbDepartamento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbReservas" EntityType="Self.tbReservas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbUsuarios" EntityType="Self.tbUsuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbVeiculos" EntityType="Self.tbVeiculos" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__tbReserva__id_de__1920BF5C" Association="Self.FK__tbReserva__id_de__1920BF5C">
+            <End Role="tbDepartamento" EntitySet="tbDepartamento" />
+            <End Role="tbReservas" EntitySet="tbReservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbReserva__id_ve__182C9B23" Association="Self.FK__tbReserva__id_ve__182C9B23">
+            <End Role="tbVeiculos" EntitySet="tbVeiculos" />
+            <End Role="tbReservas" EntitySet="tbReservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbUsuario__id_de__1273C1CD" Association="Self.FK__tbUsuario__id_de__1273C1CD">
+            <End Role="tbDepartamento" EntitySet="tbDepartamento" />
+            <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbVeiculo__id_us__15502E78" Association="Self.FK__tbVeiculo__id_us__15502E78">
+            <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+            <End Role="tbVeiculos" EntitySet="tbVeiculos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BancoMaringaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbDepartamento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbReservas" Relationship="Self.FK__tbReserva__id_de__1920BF5C" FromRole="tbDepartamento" ToRole="tbReservas" />
+          <NavigationProperty Name="tbUsuarios" Relationship="Self.FK__tbUsuario__id_de__1273C1CD" FromRole="tbDepartamento" ToRole="tbUsuarios" />
+        </EntityType>
+        <EntityType Name="tbReservas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_veiculo" Type="Int32" />
+          <Property Name="data_saida" Type="DateTime" Precision="3" />
+          <Property Name="data_retorno" Type="DateTime" Precision="3" />
+          <Property Name="destino" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="condutor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="id_departamento" Type="Int32" />
+          <Property Name="motivo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbDepartamento" Relationship="Self.FK__tbReserva__id_de__1920BF5C" FromRole="tbReservas" ToRole="tbDepartamento" />
+          <NavigationProperty Name="tbVeiculos" Relationship="Self.FK__tbReserva__id_ve__182C9B23" FromRole="tbReservas" ToRole="tbVeiculos" />
+        </EntityType>
+        <EntityType Name="tbUsuarios">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="id_departamento" Type="Int32" />
+          <Property Name="cpf" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="tipo" Type="Int32" />
+          <Property Name="CNH" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="val_CNH" Type="DateTime" Precision="3" />
+          <Property Name="telefone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="senha" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbDepartamento" Relationship="Self.FK__tbUsuario__id_de__1273C1CD" FromRole="tbUsuarios" ToRole="tbDepartamento" />
+          <NavigationProperty Name="tbVeiculos" Relationship="Self.FK__tbVeiculo__id_us__15502E78" FromRole="tbUsuarios" ToRole="tbVeiculos" />
+        </EntityType>
+        <EntityType Name="tbVeiculos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="modelo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="placa" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="id_usuario" Type="Int32" />
+          <NavigationProperty Name="tbReservas" Relationship="Self.FK__tbReserva__id_ve__182C9B23" FromRole="tbVeiculos" ToRole="tbReservas" />
+          <NavigationProperty Name="tbUsuarios" Relationship="Self.FK__tbVeiculo__id_us__15502E78" FromRole="tbVeiculos" ToRole="tbUsuarios" />
+        </EntityType>
+        <Association Name="FK__tbReserva__id_de__1920BF5C">
+          <End Role="tbDepartamento" Type="Self.tbDepartamento" Multiplicity="0..1" />
+          <End Role="tbReservas" Type="Self.tbReservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbDepartamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReservas">
+              <PropertyRef Name="id_departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbUsuario__id_de__1273C1CD">
+          <End Role="tbDepartamento" Type="Self.tbDepartamento" Multiplicity="0..1" />
+          <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbDepartamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarios">
+              <PropertyRef Name="id_departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbReserva__id_ve__182C9B23">
+          <End Role="tbVeiculos" Type="Self.tbVeiculos" Multiplicity="0..1" />
+          <End Role="tbReservas" Type="Self.tbReservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbVeiculos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReservas">
+              <PropertyRef Name="id_veiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbVeiculo__id_us__15502E78">
+          <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="0..1" />
+          <End Role="tbVeiculos" Type="Self.tbVeiculos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarios">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbVeiculos">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BancoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbDepartamento" EntityType="Self.tbDepartamento" />
+          <EntitySet Name="tbReservas" EntityType="Self.tbReservas" />
+          <EntitySet Name="tbUsuarios" EntityType="Self.tbUsuarios" />
+          <EntitySet Name="tbVeiculos" EntityType="Self.tbVeiculos" />
+          <AssociationSet Name="FK__tbReserva__id_de__1920BF5C" Association="Self.FK__tbReserva__id_de__1920BF5C">
+            <End Role="tbDepartamento" EntitySet="tbDepartamento" />
+            <End Role="tbReservas" EntitySet="tbReservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbUsuario__id_de__1273C1CD" Association="Self.FK__tbUsuario__id_de__1273C1CD">
+            <End Role="tbDepartamento" EntitySet="tbDepartamento" />
+            <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbReserva__id_ve__182C9B23" Association="Self.FK__tbReserva__id_ve__182C9B23">
+            <End Role="tbVeiculos" EntitySet="tbVeiculos" />
+            <End Role="tbReservas" EntitySet="tbReservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbVeiculo__id_us__15502E78" Association="Self.FK__tbVeiculo__id_us__15502E78">
+            <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+            <End Role="tbVeiculos" EntitySet="tbVeiculos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BancoMaringaModelStoreContainer" CdmEntityContainer="BancoEntities">
+          <EntitySetMapping Name="tbDepartamento">
+            <EntityTypeMapping TypeName="BancoMaringaModel.tbDepartamento">
+              <MappingFragment StoreEntitySet="tbDepartamento">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbReservas">
+            <EntityTypeMapping TypeName="BancoMaringaModel.tbReservas">
+              <MappingFragment StoreEntitySet="tbReservas">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_veiculo" ColumnName="id_veiculo" />
+                <ScalarProperty Name="data_saida" ColumnName="data_saida" />
+                <ScalarProperty Name="data_retorno" ColumnName="data_retorno" />
+                <ScalarProperty Name="destino" ColumnName="destino" />
+                <ScalarProperty Name="condutor" ColumnName="condutor" />
+                <ScalarProperty Name="id_departamento" ColumnName="id_departamento" />
+                <ScalarProperty Name="motivo" ColumnName="motivo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarios">
+            <EntityTypeMapping TypeName="BancoMaringaModel.tbUsuarios">
+              <MappingFragment StoreEntitySet="tbUsuarios">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="id_departamento" ColumnName="id_departamento" />
+                <ScalarProperty Name="cpf" ColumnName="cpf" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="CNH" ColumnName="CNH" />
+                <ScalarProperty Name="val_CNH" ColumnName="val_CNH" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="senha" ColumnName="senha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbVeiculos">
+            <EntityTypeMapping TypeName="BancoMaringaModel.tbVeiculos">
+              <MappingFragment StoreEntitySet="tbVeiculos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
